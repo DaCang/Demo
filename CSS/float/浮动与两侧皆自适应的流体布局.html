@@ -4,55 +4,50 @@
 	<meta charset="UTF-8">
 	<title>浮动与两侧皆自适应的流体布局</title>
 	<style type='text/css'>
-	*{margin: 0;padding:0;}
-	body{
-		background: #ddf3f7;
-	}
-	#headphoto{
-		width:56px;
-		height:56px;
-		float: left;
-	}
-	#contentpic{
-		width:90px;
-		height: 120px;
-		margin-top: 20px;
-	}
-	div{
-		width:560px;
-		margin:0 auto;
-		background: #fff;
-		padding: 20px;
-	}
-	#content{
-		margin-top: 50px;
-	}
-	#content p{
-		margin-left: 110px;
-	}
-	#select{
-		margin-top: 10px;
-		height: 40px;
-	}
-	#select p{
-		line-height: 40px;
-	}
+	body {font-size: 14px;background: #DDF3F7;color: #333;}
+	a {color: #0082CB;text-decoration: none;}
+	p{margin:0;} img{border: 0;}
+
+	.mib_body{width:600px;margin: 50px auto;}
+	.mib_x {margin-bottom: 10px;background: #fff;}
+	.mib_list{padding: 20px;}
+	.mib_resize{overflow: auto;resize: both}
+	.mib_vip{display: inline-block;width: 11px;height: 10px;margin-left: 1px;background: url(data:image/gif;base64,R0lGODlhCwAKAJEDAPyZCveDBuJmBP///yH5BAEAAAMALAAAAAALAAoAAAIdhD1zopgTXgMpsBdylVCPK2UCKI0j95hoRa0NVwAAOw==);}
+
+	.mib_head_a {float: left;margin-right: 20px;}
+
+	.mib_cell{display: table-cell;*display: inline-block;width: 2000px;*width: auto;}
+
+	.mib_sms{line-height: 22px;padding-bottom: 6px;font-size: 14px;}
+	.mib_select{width: 80px;padding:5px;font-size: 100%;}
 	</style>
 </head>
 <body>
-	<div id='content'>
-		<img src="images/tiger10.png" id='headphoto'>
-		<p>W3C standards define an Open Web Platform for application development that has the unprecedented potential to enable developers to build rich interactive experiences, powered by vast data stores.</p>
-		<p><img src="images/apic3.jpg" id='contentpic'></p>
+	<div id='mibBody' class='mib_body'>
+		<div class='mib_x mib_resize'>
+			<div class='mib_list'>
+				<a href="http://weibo.com/2834400580/profile?topnav=1&wvr=6&is_all=1" class="mib_head_a">
+					<img id='mibHeadImg' title='赵丽娜的微博' src="images/tiger3.png" width='56' height="56">
+				</a>
+				<div class="mib_cell">
+					<p class='mib_sms'><a title='赵丽娜Nina' href="#">赵丽娜Nina<i title='新浪认证' class="mib_vip"></i></a>：所有的理想主义者都在脚踏实地。我想吃糖醋排骨，牛肉丸子面，砂锅面，担担面。我在看马薇薇，看奇葩说真的会了解很多。让我能够容纳有可以与我不同的人，可以理解那些异见者和少数者自己的不得已。</p>
+					<div class="feed_img"><img src="images/apic3.jpg" width='90' height="120"></div>
+				</div>
+			</div>
+		</div>
+		<div class="mib_x">
+			<div class="mib_list">
+				<p class="mib_sms">
+					选择头像的宽度：<select id='minSelect' class="mib_select">
+						<option value="56px">56px</option>
+						<option value="70px">70px</option>
+						<option value="84px">84px</option>
+						<option value="100px">100px</option>
+					</select>
+				</p>
+			</div>
+		</div>
 	</div>
-	<div id='select'>
-		<p>选择头像的宽度:
-		<select>
-			<option>56px</option>
-			<option>70px</option>
-			<option>84px</option>
-			<option>100px</option>	
-		</select></p>
-	</div>
+
 </body>
 </html>
