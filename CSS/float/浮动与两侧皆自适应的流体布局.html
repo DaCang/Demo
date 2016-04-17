@@ -4,30 +4,33 @@
 	<meta charset="UTF-8">
 	<title>浮动与两侧皆自适应的流体布局</title>
 	<style type='text/css'>
-	body {font-size: 14px;background: #DDF3F7;color: #333;}
-	a {color: #0082CB;text-decoration: none;}
-	p{margin:0;} img{border: 0;}
+		body {font-size: 14px;background: #DDF3F7;color: #333;}
+		a {color: #0082CB;text-decoration: none;}
+		p{margin:0;} img{border: 0;}
 
-	.mib_body{width:600px;margin: 50px auto;}
-	.mib_x {margin-bottom: 10px;background: #fff;}
-	.mib_list{padding: 20px;}
-	.mib_resize{overflow: auto;resize: both}
-	.mib_vip{display: inline-block;width: 11px;height: 10px;margin-left: 1px;background: url(data:image/gif;base64,R0lGODlhCwAKAJEDAPyZCveDBuJmBP///yH5BAEAAAMALAAAAAALAAoAAAIdhD1zopgTXgMpsBdylVCPK2UCKI0j95hoRa0NVwAAOw==);}
+		.mib_body{width:600px;margin: 50px auto;}
+		.mib_x {margin-bottom: 10px;background: #fff;}
+		.mib_list{padding: 20px;}
+		.mib_resize{overflow: auto;resize: both}
+		.mib_vip{display: inline-block;width: 11px;height: 10px;margin-left: 1px;background: url(data:image/gif;base64,R0lGODlhCwAKAJEDAPyZCveDBuJmBP///yH5BAEAAAMALAAAAAALAAoAAAIdhD1zopgTXgMpsBdylVCPK2UCKI0j95hoRa0NVwAAOw==);}
+		
+		#mibHeadImg{width: 56px;}
 
-	.mib_head_a {float: left;margin-right: 20px;}
+		.mib_head_a {float: left;margin-right: 20px;}
 
-	.mib_cell{display: table-cell;*display: inline-block;width: 2000px;*width: auto;}
+		.mib_cell{display: table-cell;*display: inline-block;width: 2000px;*width: auto;}
 
-	.mib_sms{line-height: 22px;padding-bottom: 6px;font-size: 14px;}
-	.mib_select{width: 80px;padding:5px;font-size: 100%;}
+		.mib_sms{line-height: 22px;padding-bottom: 6px;font-size: 14px;}
+		.mib_select{width: 80px;padding:5px;font-size: 100%;}
 	</style>
+
 </head>
 <body>
 	<div id='mibBody' class='mib_body'>
 		<div class='mib_x mib_resize'>
 			<div class='mib_list'>
 				<a href="http://weibo.com/2834400580/profile?topnav=1&wvr=6&is_all=1" class="mib_head_a">
-					<img id='mibHeadImg' title='赵丽娜的微博' src="images/tiger3.png" width='56' height="56">
+					<img id='mibHeadImg' title='赵丽娜的微博' src="images/tiger3.png" >
 				</a>
 				<div class="mib_cell">
 					<p class='mib_sms'><a title='赵丽娜Nina' href="#">赵丽娜Nina<i title='新浪认证' class="mib_vip"></i></a>：所有的理想主义者都在脚踏实地。我想吃糖醋排骨，牛肉丸子面，砂锅面，担担面。我在看马薇薇，看奇葩说真的会了解很多。让我能够容纳有可以与我不同的人，可以理解那些异见者和少数者自己的不得已。</p>
@@ -49,5 +52,15 @@
 		</div>
 	</div>
 
+	<script type='text/javascript'>
+		var ele_mibSelect = document.getElementById('minSelect'),
+			ele_mibHeadImg = document.getElementById('mibHeadImg');
+
+		if(ele_mibSelect && ele_mibHeadImg){
+			ele_mibSelect.onchange=function(){
+				ele_mibHeadImg.style.width = this.value;
+			};
+		}
+	</script>
 </body>
 </html>
