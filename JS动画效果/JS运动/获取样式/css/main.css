@@ -1,0 +1,8 @@
+/*
+* @Author: acer
+* @Date:   2016-04-11 12:10:10
+* @Last Modified by:   acer
+* @Last Modified time: 2016-04-11 15:35:02
+*/
+*{margin:0;padding:0;}
+#div1{width:200px;height:200px;background: red;border:solid 2px #000;font-size: 13px;color: white;}

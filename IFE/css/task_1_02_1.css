@@ -1,0 +1,157 @@
+/*
+* @Author: acer
+* @Date:   2016-04-14 09:17:23
+* @Last Modified by:   acer
+* @Last Modified time: 2016-04-14 12:35:26
+*/
+*{margin:0;padding:0;}
+body{
+	font-family: 'Microsoft YaHei';
+	background: #dedede;
+}
+/*标题栏*******//*********************/
+.title{
+	height:60px;
+	background: #333;
+}
+.title img{
+	width:60px;
+	height: 60px;
+	padding-left:40px;
+}
+.title ul{
+	position: absolute;
+	top:0;
+	right: 10px;
+}
+.title ul li{
+	display: block;
+	float:left;
+	padding-left:20px;
+	padding-top:30px;
+}
+.title ul li a {
+	color:white;
+	text-decoration: none;
+	font-size: 10px;
+	font-weight: bold;
+}
+/*内容主题*//*******************************/
+.content{
+	background: white;
+	margin:20px 20px;
+	border:2px solid #cdcdcd;
+	box-shadow: 3px 3px 3px #aeaeae;
+	padding:30px 20px;
+	font-size: 14px;
+	font-family: '宋体';
+}
+.content h2{
+	font-size: 20px;
+	font-weight:bold;
+	line-height: 40px;
+}
+.content h3{
+	font-size: 16px;
+	color:#565656;
+	line-height: 30px;
+}
+.content span{
+	font-size: 10px;
+	color:#7b7b7b;
+	line-height: 28px;
+}
+.content p{
+	font-size: 15px;
+	line-height: 20px;
+}
+.content img{
+	border:1px solid #000;
+}
+.content ul li{
+	list-style-type: none;
+	display: block;
+	margin-top:10px;
+}
+.content li{
+	font-weight:bold;
+}
+#Picture li{
+	display: block;
+	width:150px;
+	height: 150px;
+	border: 1px solid #ccc;
+	padding: 10px;
+	text-align: center;
+	margin-left: 50px;
+}
+.content ol{
+	display: block;
+	margin-left: 40px;
+	line-height: 28px;
+}
+.content table{
+	border-collapse: collapse;
+}
+.content td,tr,th{
+	border:1px solid #ccc;
+	height:25px;
+	width:500px;
+	text-align: left;
+	padding-left: 5px;
+	font-size: 10px;
+}
+.content table tr th{
+	background: #333;
+	color: white;
+	font-size: 12px;
+}
+/*侧栏***//***********************************************/
+aside h4{
+    height:40px;
+    line-height:40px;
+    padding-left:10px;
+    border-left:3px solid #ccc;
+}
+aside form div{
+    font-size: 14px;
+    margin:15px 0;
+}
+aside form div .tips{
+    float:left; 
+    text-align:right;
+    width:35%;
+    padding-right:15px;
+}
+aside form div p{
+    margin-left:35%;
+    padding-left:15px;
+    font-size:12px;
+    color: #aaa;
+}
+aside textarea{
+    width:50%;
+    height:100px;
+
+}
+aside .submitButton{
+    width:100%;
+    height:40px;
+    border-radius: 10px;
+    background: #3355d0;
+    color: white;
+    font-size: 19px;
+    border:none;
+}
+/*底部*************************/
+.footer{
+	height:70px;
+	background: black;
+	text-align: center;
+	padding-top: 25px;
+}
+.footer p{
+	font-size: 11px;
+	font-weight:bold;
+	color:white;
+}

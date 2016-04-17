@@ -1,0 +1,47 @@
+/*
+* @Author: acer
+* @Date:   2016-04-14 17:11:47
+* @Last Modified by:   acer
+* @Last Modified time: 2016-04-14 20:39:10
+*/
+*{margin:0;padding:0;}
+body{padding:20px;}
+#content{
+	background: #eee !important;
+	margin:0,auto;
+	overflow: auto;
+	min-width: 600px;
+	}
+img{
+	width:80px;
+	height:80px;
+	border:1px solid #ccc;
+}
+#content,#Teamlogo,#description,#Personlogo{
+	background:white;
+	border: 1px solid #999;
+	padding:20px; 
+}
+#Teamlogo{
+	width:160px;
+	float: left;
+}
+#Teamlogo img{
+	float:left;
+	margin-right: 10px;
+}
+#Teamlogo p{
+	font-size: 13px;
+	margin-top: 30px;
+}
+#description{
+	margin-left: 220px;
+	margin-right: 140px;
+}
+#Personlogo{
+	width:80px;
+	float: right;
+}
+#Personlogo img{
+	margin-bottom: 20px;
+}

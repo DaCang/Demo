@@ -1,0 +1,150 @@
+/*
+* @Author: acer
+* @Date:   2016-03-24 09:11:19
+* @Last Modified by:   acer
+* @Last Modified time: 2016-03-25 11:53:50
+*/
+/*取消默认格式*/
+*{
+	padding:0px;
+	margin:0px;
+	font-size: 12px;
+	font-family: '微软雅黑';
+}
+/*登录面板设置*/
+.loginPanel{
+	width:428px;
+	height:327px;
+	left:400px;
+	top:120px;
+	position:absolute;
+	border:1px solid #ccc;
+	background: #ebf2f9;
+	box-shadow:0 0 8px #d4dce4;
+	z-index: auto;
+}
+/*登录背景设置*/
+.loginBg{
+	width:428px;
+	height:180px;
+	padding:0px;
+	margin:0px;
+	background-image: url('../images/loginBg.png');
+	cursor: move;
+}
+/*关闭按钮设置*/
+.ui_boxyClose{
+	width:28px;
+	height:28px;
+	background-image: url('../images/close.png');
+	position:relative;
+	top:0px;
+	left:400px;
+	cursor: pointer;
+}
+/*输入版设置*/
+.loginInputs{
+	width:428px;
+	height:147px;
+	padding:0px;
+	margin:0px;
+}
+/*头像显示区域设置*/
+.ul_photo{
+	width:80px;
+	height:80px;
+	background-image: url('../images/photo.png');
+	float:left;
+	margin-top: 13px;
+	margin-left: 40px;
+	margin-right: 12px;
+}
+/*状态框显示位置*/
+.loginstate{
+	width:14px;
+	height:14px;
+	background-image: url('../images/online.png');
+	background-repeat: no-repeat;
+	margin-top: 66px;
+	margin-left: 66px;
+}
+ul{
+	list-style-type: none;
+	width:105px;
+	height:143px;
+	position:relative;
+	left:66px;
+	background-color: #fff;
+	z-index:1;
+}
+.online{
+	width:26px;height: 20px;background-image: url('../images/online.png');background-repeat: no-repeat;
+}
+.callme{
+	width:26px;height: 20px;background-image: url('../images/callme.png');background-repeat: no-repeat;
+}
+.away{
+	width:26px;height: 20px;background-image: url('../images/away.png');background-repeat: no-repeat;
+}
+.busy{
+	width:26px;height: 20px;background-image: url('../images/busy.png');background-repeat: no-repeat;
+}
+.hidden{
+	width:26px;height: 20px;background-image: url('../images/hidden.png');background-repeat: no-repeat;
+}
+.silent{
+	width:26px;height: 20px;background-image: url('../images/silent.png');background-repeat: no-repeat;
+}
+/*输入框设置*/
+.inputs{
+	width:193px;
+	height:28px;
+	padding:0px;
+	margin:0px;
+	border:1px solid #ced4da;
+	margin-right: 10px;
+}
+#inputs_number{
+	border-bottom: none;
+}
+.explain{
+	font-size: 12px;
+	color: #09a3dc;
+	font-family: '微软雅黑';
+	cursor: pointer;
+}
+/*输入框位置设置*/
+.login_inputs{
+	float:left;
+	padding:0px;
+	margin-top: 13px;
+}
+/*复选框设置*/
+.remember{
+	font-size: 12px;
+	color: #656565;
+
+}
+/*间距设置*/
+.checkbox{
+	margin-right: 3px;
+	vertical-align: middle;
+}
+/*复选框位置设置*/
+.checkbox_select{
+	margin-top: 5px;
+	height: 12px;
+	width:193px;
+	padding:0px;
+}
+/*登录按钮设置*/
+.btn{
+	 height:30px;
+	 width:193px;
+	 border:0px;
+	 background-color: #09a3dc;
+	 color:white;
+	 border-radius: 5px;
+	 position:absolute;
+	 bottom: 12px;
+}

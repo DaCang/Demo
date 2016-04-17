@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dome</title>
+	<link rel='stylesheet' href='css/main.css' />
+	<script src="js/main.js"></script>
+	<script>
+		$(function(){
+			$("#show a").mouseenter(function(){
+				$(this).find("i").animate({top:"-25px", opacity:"0"},300,function() {
+						$(this).css({top:"30px"});
+						$(this).animate({top:"2px", opacity:"1"},200);
+				});
+			});
+		});	
+	</script>
+</head>
+<body>
+	<div id='show'>
+		<a href='#'><i><img src='images/cat1.png'></i><p>Cat</p></a>	
+		<a href='#'><i><img src='images/cat2.png'></i><p>Dog</p></a>
+		<a href='#'><i><img src='images/cat3.png'></i><p>Sheep</p></a>
+		<a href='#'><i><img src='images/cat4.png'></i><p>Pig</p></a>
+		<a href='#'><i><img src='images/cat5.png'></i><p>Duck</p></a>
+		<a href='#'><i><img src='images/cat6.png'></i><p>Cattle</p></a>
+	</div>
+</body>
+</html>

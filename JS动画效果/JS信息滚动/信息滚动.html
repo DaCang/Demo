@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>信息滚动</title>
+	<style typt='css/text'>
+	*{margin:0;padding:0;}
+	#scroll{
+		width:526px;
+		height:235px;
+		margin:50px auto;
+		border:3px solid #ccc;
+		padding:10px;
+	}
+	dl,dt{
+		list-style-type: none;
+	}
+	dl dt{
+		font-size: 16px;
+		font-weight: bold;
+		line-height: 24px;
+		color: black;
+	}
+	</style>
+</head>
+<body>
+	<div id='scroll'>
+		<dl>
+			<dt>文字滚动示例（默认）:</dt>
+			<dd>
+				<marquee>我默认向左滚</marquee>
+			</dd>
+		</dl>
+		<dl>
+			<dt>文字滚动示例（向右滚）:</dt>
+			<dd>
+				<marquee direction='right' scrolldelay='500'>我向右滚动</marquee>
+			</dd>
+		</dl>		
+		<dl>
+			<dt>文字滚动示例（默认方向，滚动方式为alternate，循环3次，速度为2）:</dt>
+			<dd>
+				<marquee scrollamount='2' behavior='alternate' loop='3'>我来回滚动</marquee>
+			</dd>
+		</dl>		
+		<dl>
+			<dt>文字滚动示例（向上，背景为#CCFF66,设置宽度和高度）:</dt>
+			<dd>
+				<marquee direction='up' bgcolor='#ccff66' width='250' height='55'>我在区域内滚动，向上滚呦</marquee>
+			</dd>
+		</dl>	
+</body>
+</html>

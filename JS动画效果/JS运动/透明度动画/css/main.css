@@ -1,0 +1,16 @@
+/*
+* @Author: acer
+* @Date:   2016-04-11 12:10:10
+* @Last Modified by:   acer
+* @Last Modified time: 2016-04-11 14:35:34
+*/
+*{margin:0;padding:0;}
+div{
+	width:200px;
+	height:200px;
+	background: red;
+	filter: alpha(opacity:30);
+	opacity: 0.3;
+	float:left;
+	margin-left: 10px;
+}

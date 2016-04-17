@@ -1,0 +1,19 @@
+/*
+* @Author: acer
+* @Date:   2016-04-12 18:55:20
+* @Last Modified by:   acer
+* @Last Modified time: 2016-04-12 21:49:57
+*/
+*{margin:0;padding:0;}
+ul{
+	list-style-type:none;
+}
+li{
+	width:200px;
+	height:100px;
+	display: block;
+	background: yellow;
+	margin-top: 20px;
+	filter:alpha(opacity:30);
+	opacity: 0.3;
+}
