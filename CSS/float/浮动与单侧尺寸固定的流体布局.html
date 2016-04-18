@@ -2,25 +2,24 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>浮动与两侧皆自适应的流体布局</title>
+	<title>浮动与单侧尺寸固定的流体布局</title>
 	<style type='text/css'>
 		*{margin:0;padding:0;}
 		body{background: #ddf3f7;font-size: 14px;color: #333;line-height: 22px;}
 		
-		.container{width: 560px; margin: 50px auto;}
-		.content{background: #fff;padding:20px;}
+		.container{width: 600px; margin: 50px auto;}
+		.content{background: #fff;padding:20px;overflow: auto;resize: both;}
 		.content_top{margin-bottom: 10px;}
-		.content_bottom{height: 40px;}
-
 		
 		.name{color: #0082CB;}
 		.vip{display: inline-block;width: 11px;height: 10px;margin-left: 1px;background: url(data:image/gif;base64,R0lGODlhCwAKAJEDAPyZCveDBuJmBP///yH5BAEAAAMALAAAAAALAAoAAAIdhD1zopgTXgMpsBdylVCPK2UCKI0j95hoRa0NVwAAOw==);}
 
-		.headphoto{float: left;margin-right: 20px;width:56px;}
-	
-		.select {width:80px;padding: 5px;font-size: 100%;}
+		.headphoto{float: left;width: 56px;}
+		/*固定布局*/
+		.sms{float: right;width: 484px;}
 
-		.sms{display: table-cell;*display: inline-block;width: 2000px;*width: auto;}
+		/*流体布局*/
+		.sms_two{margin-left: 76px;}
 	</style>
 
 </head>
@@ -33,24 +32,15 @@
 				<p><img src="images/apic01.jpg" class="content_pic"></p>
 			</div>
 		</div>
-		<div class="content_botttom content">
-			<p>选择头像的尺寸：<select class="select" id='select'>
-				<option value='56px'>56px</option>
-				<option value='70px'>70px</option>
-				<option value='84px'>84px</option>
-				<option value='100px'>100px</option>
-			</select></p>
+
+		<div class="content_bottm content">
+			<img src="images/tiger01.png" class="headphoto" id='headphoto'>
+			<div class="sms_two">
+				<p><span class="name">赵丽娜</span><span class="vip"></span>:今天我们家要来好多好多人啊，越来越不想在家里呆着，想去北京，想去看看，不要在这里。赵娜娜，你要加油啊！除了你自己，没人该对你的人生负责。想看红楼梦，87版的简直碉堡了！互相特想看红楼梦啊，看看书，看看电视剧。林黛玉的饰演者陈晓旭简直是仙啊！</p>
+				<p><img src="images/apic01.jpg" class="content_pic"></p>
+			</div>
 		</div>
+	</div>
 
-		<script>
-			var oHeadphoto=document.getElementById('headphoto');
-			var oSelect=document.getElementById('select');
-
-			if( oHeadphoto && oSelect){
-				oSelect.onchange=function(){
-					oHeadphoto.style.width=this.value;
-					}
-			}
-		</script>
 </body>
 </html>
