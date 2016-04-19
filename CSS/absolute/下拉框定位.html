@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>下拉框定位</title>
+	<style>
+	*{padding: 0;margin:0;}
+	body{background:#EDEFF0;}
+	
+	.container{padding-left: 10px;}
+	.sidebar{background: #fff;width: 262px;line-height: 18px;padding:10px;margin:0;border:1px solid blue;font-size: 12px;font-family: inherit;float: left;}
+	.search ul{list-style-type: none;width:262px;border: 1px solid #ccc;background: #fff;position: absolute;margin-top: 40px;}
+	.search ul li{display:block;font-size: 12px;padding: 10px;}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="search">
+			<ul>
+				<li>身高：161cm</li>
+				<li>体重：42kg</li>
+				<li>年龄：22岁</li>
+				<li>爱好：前端</li>
+			</ul>
+		</div>
+		<input type='text' class="sidebar" placeholder="搜索">
+	</div>	
+</body>
+</html>
