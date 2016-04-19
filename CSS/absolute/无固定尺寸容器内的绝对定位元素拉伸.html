@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>无固定width/height容器内的绝对定位元素拉伸</title>
+	<style type="text/css">
+		*{padding:0;margin:0;}
+		img{width:1200px;height:600px;}
+		.content{position: relative;}
+		.cover{position: absolute;left:0;right:0;top:0;bottom: 0;background:#fff;filter: alpha(opacity:50);opacity: 0.5;}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<span class="cover"></span>
+		<img src="images/apic2.jpg">
+	</div>	
+</body>
+</html>

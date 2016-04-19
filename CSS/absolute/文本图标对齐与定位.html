@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文本图标对齐与定位</title>
+	<style>
+	*{padding:0;margin:0;}
+	body{background: #EDEFF0;}
+	header{height: 60px;background: #000;color: #fff;font-size: 18px;line-height: 60px;padding-left: 30px;}
+	.container{width: 85%;margin:0px auto;background: #fff;}
+	.content{width:600px;margin:0px auto;text-align: left;padding:100px 0; }
+	p{margin-top: 20px;overflow: auto;}
+	.content input{height: 18px;line-height: 18px;width: 260px;padding:10px 5px;margin:0 10px 0 10px;border: 1px solid #d0d6d9;}
+	.content p span{font-family: simsun;color: #f30;position: absolute;margin-left:-10px;margin-top: 8px;}
+	.content p i{display: inline-block;width: 70px;height: }
+	.button{width:160px;height:40px !important;line-height: 40px;background: #39b94e;color: #fff;text-align: center;margin-left: 80px !important;}
+	</style>
+</head>
+<body>
+	<header>注册</header>
+	<div class="container">
+		<div class="content">
+			<p><span>*</span><i>登录邮箱</i><input type="text"></input></p>
+			<p><span>*</span><i>登录密码</i><input type="text"></input></p>
+			<p><span>*</span><i>用户昵称</i><input type="text"></input></p>
+			<p><i>手机号码</i><input type="text"></input></p>
+			<p><span>*</span><i>验证码</i><input type="text"></input></p>
+			<p><input class='button' type="button" value="立即注册"></input></p>
+		</div>
+	</div>	
+</body>
+</html>
