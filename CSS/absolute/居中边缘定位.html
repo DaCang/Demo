@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>居中边缘定位</title>
+	<style>
+	*{padding: 0;margin: 0;}
+	.container{width:80%;height:1200px;background: #EDEFF0;margin:0 auto;overflow: auto;}
+	.sidebar_nav ul{list-style-type: none}
+	.sidebar_nav ul li{display: block;background: #000;color:white;width: 40px;height: 40px;line-height:40px;margin-top: 20px;text-align: center;  }
+	/*居中对齐*/
+	.center{text-align: center;}
+	.center img{position: absolute;margin-left: -134px;}
+
+	/*边缘对齐*/
+	.sidebar{text-align: right;}
+	.sidebar_nav{display:inline-block;position: fixed;margin-left: 20px;}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="images/tiger12.png">
+		<img src="images/tiger13.png">
+		<img src="images/tiger14.png">
+		<div class="center">
+			&nbsp;<img src="images/tiger15.png">
+		</div>
+
+		<div class="sidebar">
+		&nbsp;
+			<div class="sidebar_nav">
+				<ul>
+					<li>瘦</li>
+					<li>瘦</li>
+					<li>瘦</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
