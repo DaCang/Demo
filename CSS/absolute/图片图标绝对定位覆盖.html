@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片图标绝对定位覆盖</title>
+	<style>
+	*{padding: 0;margin:0;}
+	body{background:#EDEFF0;}
+	
+	.head{height:60px;background: #2A2C2E;font-size: 18px;color: #fff;}
+	ul{list-style-type: none;}
+	ul li{display: block;float: left;margin:35px 20px 0px 10px;}
+	
+	.container{
+		margin-top: 10px;
+		margin-left: 10px;
+	}
+	.content{
+		width:300px;
+		height:200px;
+		text-align: center;
+		background: #fff;
+		line-height: 200px;
+		border: 1px solid #000;
+		display: inline-block;
+	}
+	img{
+		width:30px;
+		height:30px;
+	}
+	.one{position: absolute;}
+	.two{position: absolute;margin-left: -30px;}
+
+	span{position: absolute;margin-left: 2px;margin-top:-10px;}
+	</style>
+</head>
+<body>
+	<div class="head">
+		<ul>
+			<li>导航一</li>
+			<li>导航二</li>
+			<li>导航三<span>喵～</span></li>
+		</ul>
+	</div>
+	<div class="container">
+		<img class="one" src="images/01.ico"><!--
+		--><div class="content">
+		Love
+		</div><!--
+		--><img class="two" src="images/02.ico"> 
+	</div>	
+</body>
+</html>
