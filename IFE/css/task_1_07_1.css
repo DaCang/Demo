@@ -1,0 +1,46 @@
+* {padding:0;margin:0;}
+.container {width: 95%;margin:0 auto;}
+/*header section*/
+header {
+	height: 57px;
+	background: url(images/07/books.png) no-repeat;
+}
+header div {
+	float:left;
+	height: 57px;
+	line-height: 57px;
+	margin-left: 60px;
+	font-size: 21px;
+	font-family: "黑体";
+}
+header div img{
+	vertical-align: middle;
+}
+header ul{
+	list-style-type: none;
+	float: right;
+	margin-right: 65px;
+}
+header ul li{
+	display: block;
+	float: left;
+	width:60px;
+	text-align: center;
+	margin-left: 40px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	margin-top: 13px;
+}
+header a {
+	text-decoration: none;
+	color: #000;
+}
+.middle {vertical-align: top;}
+
+.active {color:#e74f4d;}
+
+/*Home*/
+.homepage {
+	height: 690px;
+	background: url(../images/07/section1.png) no-repeat;
+}

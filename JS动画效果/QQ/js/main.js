@@ -1,4 +1,4 @@
-window.onload=function(){
+/*window.onload=function(){
 	// 关闭面板
 	var oClose=document.getElementById('ui_boxyClose');
 	var oPanel=document.getElementById('loginPanel');
@@ -25,7 +25,7 @@ window.onload=function(){
 		}
 	// 显示坐标
 		
-	/*
+	
 	// 拖拽效果实现
 	var loginBg=document.getElementById('loginBg');
 		loginBg.onmousedown=drag;
@@ -68,5 +68,33 @@ window.onload=function(){
 		}
 		oPanel.style.left=l +'px';
 		oPanel.style.right=r + 'px';
-	}*/
-}
+	}
+}*/
+$(function(){
+
+	var disX = 0;
+	var disY = 0;
+
+	$('#loginPanel').mousedown(function(ev){
+		
+		disX = ev.pageX - $(this).offset().left;
+		disY = ev.pageY - $(this).offset().top;
+		
+		$(document).mousemove(function(ev){
+			
+			$('#loginPanel').css('left',ev.pageX - disX);
+			$('#loginPanel').css('top',ev.pageY - disY);
+			
+		});
+		
+		$(document).mouseup(function(){
+			
+			$(document).off();
+			
+		});
+		
+		return false;
+		
+	});
+
+});

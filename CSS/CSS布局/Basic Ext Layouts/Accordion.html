@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Accordion</title>
+	<style>
+		* {margin:0;padding:0;}
+		div {height: 545px;background: #ccc;width: 100%;display: none;text-align: center;}
+		ul {list-style-type: none;}
+		ul li {display: block;height:30px;background: #000;color:white;text-align: center;border:1px solid #ccc;line-height: 30px;cursor: pointer;}
+	</style>
+	<script>
+		window.onload = function(){
+			var oLi = document.getElementsByTagName('li');
+			var oDiv = document.getElementsByTagName('div');
+			var flag = true;
+
+			for(var i=0;i<oLi.length;i++){
+				oLi[i].index = i;
+				oLi[i].onclick = function(){
+					for(var i=0;i<oLi.length;i++){
+						if(i !== this.index){
+							oDiv[i].style.display = "none";
+						}
+					}
+					if(flag){
+						oDiv[this.index].style.display = "block";
+						flag = false;
+					}else{
+						oDiv[this.index].style.display = "none";
+						flag = true;
+					}
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<ul>
+		<li>Part 1</li>
+			<div>
+				This is a Part1.
+			</div>
+		<li>Part 2</li>
+			<div>This is a Part2.
+			</div>
+		<li>Part 3</li>
+			<div>This is a Part3.
+			</div>
+	</ul>
+</body>
+</html>

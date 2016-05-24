@@ -11,7 +11,7 @@ window.onload=function(){
 }
 function showDay(){
 	var currentTime=new Date();
-	var endTime=new Date('2016,4,29');
+	var endTime=new Date('2016,6,20');
 	var leftTime=(endTime.getTime()-currentTime.getTime())/(24*60*60*1000);
 	if(leftTime>0){
 		leftTime=Math.ceil(leftTime);

