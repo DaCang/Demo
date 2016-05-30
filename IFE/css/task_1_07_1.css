@@ -43,4 +43,22 @@ header a {
 .homepage {
 	height: 690px;
 	background: url(../images/07/section1.png) no-repeat;
+	font-family: "微软雅黑";
+	color: #fff;
+}
+.top {
+	font-size: 60px;
+}
+.middle {
+	font-size: 21px;
+}
+.last {
+	font-size: 30px;
+}
+.cover {
+	height: 690px;
+	background: #000;
+	filter:alpha(opacity:20);
+	opacity: 0.2;
+	position: absolute;
 }
